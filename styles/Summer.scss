@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea&family=Hina+Mincho&display=swap');
+@import './modules/mixin';
+@import './modules/menu.scss';
+@import './modules/variables';
+@import './modules/text-animation';
+@import './modules/image-slide';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gudea', sans-serif;
+  font-family: 'Hina Mincho', serif;
+}
+
+.header_nav > nav {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-container {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/2022_0630_23312000.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 80px;
+}
+
+header {
+  z-index: 2;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+i {
+  margin-right: 6px;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 0px 4px 5px rgba(125, 122, 117, 0.8);
+}
+
+.logo .fa-volcano {
+  color: red;
+}
+
+li:nth-of-type(1) i {
+  color: olive;
+}
+li:nth-of-type(2) i {
+  color: green;
+}
+li:nth-of-type(3) i {
+  color: blue;
+}
+li:nth-of-type(4) i {
+  color: orange;
+}
+li:nth-of-type(5) i {
+  color: silver;
+}
+
+.heading {
+  font-family: 'Gudea', sans-serif;
+  font-family: 'Hina Mincho', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 7rem;
+  color: rgb(125, 231, 222);
+  text-shadow: 0px 4px 5px rgba(135, 241, 249, 0.8);
+}
+
+#container {
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.header_nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav li {
+  margin-right: 16px;
+  position: relative;
+  overflow: hidden;
+  padding: 6px 9px;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+    border-radius: 30%;
+    background-color: rgba(227, 150, 62, 0.8);
+  }
+
+  &:hover::before {
+    transform: none;
+  }
+
+  &:hover a {
+    color: white;
+  }
+}
+
+.header_nav ul:last-child {
+  margin-right: 0px;
+}
+
+.header_nav li a {
+  color: black;
+  transition: all 0.3s;
+  font-size: 18px;
+}
+
+.photo-spot {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  &:nth-of-type(1) {
+    background-image: url(../images/2021_0618_18361200.jpg);
+    & h3 {
+      color: $cRainy;
+    }
+    & h4 span {
+      color: $cRainy_sub;
+    }
+  }
+  &:nth-of-type(2) {
+    background-image: url(../images/2020_0613_19564200.jpg);
+    & h3 {
+      color: $cRainy;
+    }
+    & h4 span {
+      color: $cRainy_sub;
+    }
+  }
+  &:nth-of-type(3) {
+    background-image: url(../images/2020_0814_11511300.jpg);
+    & h3 {
+      color: $cSummer;
+    }
+    & h4 span {
+      color: $cSummer_sub;
+    }
+  }
+
+  & .box {
+    max-width: 820px;
+    height: 580px;
+    box-shadow: 9px 6px 20px -1px #777777;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    & .box-top {
+      height: 49%;
+      display: flex;
+      justify-content: space-between;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+
+      & .box-left,
+      .box-right {
+        width: 49%;
+      }
+
+      .box-right {
+        display: flex;
+        align-items: center;
+
+        & .desc {
+          padding-left: 2rem;
+
+          & h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+
+          & h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+          }
+          & a {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: $cLink;
+          }
+        }
+      }
+    }
+
+    & .box-bottom {
+      height: 49%;
+      display: flex;
+      justify-content: space-between;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+
+      & .box-left,
+      .box-right {
+        width: 49%;
+      }
+
+      & .box-left {
+        padding: 20px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .photo-spot {
+    & .box {
+      width: 85%;
+      & h4 span {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .photo-spot {
+    & .box {
+      width: 80%;
+      height: 730px;
+      padding: 20px;
+
+      & .box-top {
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 340px;
+
+        & .box-left,
+        .box-right {
+          width: 100%;
+          height: 49%;
+        }
+
+        & .box-left {
+          height: 55%;
+        }
+
+        .box-right {
+          height: 45%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          & .desc {
+            padding-left: 10px;
+            & h3 {
+              font-size: 1.8rem;
+              margin-bottom: 0.7rem;
+            }
+
+            & h4 {
+              font-size: 1.1rem;
+              margin-bottom: 0.7rem;
+              & span {
+                display: inline;
+                font-size: 1rem;
+              }
+            }
+
+            & a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      & .box-bottom {
+        height: 50%;
+        flex-direction: column;
+        max-width: 340px;
+
+        & .box-left,
+        .box-right {
+          width: 100%;
+        }
+
+        & .box-left {
+          height: 45%;
+          font-size: 0.7rem;
+        }
+
+        & .box-right {
+          height: 55%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .photo-spot {
+    & .box {
+      height: 640px;
+      padding: 10px;
+
+      & .box-top {
+        .box-right {
+          & .desc {
+            & h3 {
+              font-size: 1.3rem;
+            }
+            & h4 {
+              font-size: 1rem;
+              // & span {
+              //   display: block;
+              // }
+            }
+            & a {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      & .box-bottom {
+        & .box-left {
+          & .desc {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ハンバーガーメニュー
+@media screen and (min-width: 920px) {
+  .header_nav nav {
+    display: block;
+  }
+
+  .mobile-menu-icon {
+    display: none;
+  }
+}

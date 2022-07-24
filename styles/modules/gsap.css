@@ -1,0 +1,75 @@
+.circles {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #8daea3;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  background-color: green;
+  width: 630px;
+  height: 630px;
+  margin: -315px 0 0 -315px;
+}
+
+.circle2 {
+  background-color: red;
+  width: 420px;
+  height: 420px;
+  z-index: 1;
+  margin: -210px 0 0 -210px;
+}
+
+.circle3 {
+  background-color: purple;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  margin: -100px 0 0 -100px;
+}
+
+.cursor {
+  position: fixed;
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: -10px 0 0 -10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  mix-blend-mode: screen;
+  z-index: 4;
+}
+
+.content h1 {
+  font-size: 9rem;
+}
+/*# sourceMappingURL=gsap.css.map */
