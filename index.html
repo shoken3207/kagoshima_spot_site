@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>鹿児島の撮影スポット</title>
+    <link rel="icon" href="/favicon/icons8-火山-32.png" />
     <link rel="stylesheet" href="./styles/normalize.css" />
     <!-- ヒーロースライダー用のcss -->
     <script src="./scripts/vendors/pace.js"></script>
@@ -41,9 +43,7 @@
           .getElementById('contact-form')
           .addEventListener('submit', function (event) {
             event.preventDefault();
-            // generate a five digit number for the contact_number variable
             this.contact_number.value = (Math.random() * 100000) | 0;
-            // these IDs from the previous steps
             emailjs
               .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
               .then(
@@ -64,7 +64,6 @@
     </script>
 
     <link rel="stylesheet" href="styles/style.css" />
-    <title>Document</title>
   </head>
   <body>
     <div id="global-container">

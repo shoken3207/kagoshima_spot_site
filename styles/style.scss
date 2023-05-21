@@ -130,10 +130,6 @@ li:nth-of-type(5) i {
     background-color: rgba(227, 150, 62, 0.8);
   }
 
-  // &:nth-of-type(1):hover::before {
-  //   background-color: green;
-  // }
-
   &:hover::before {
     transform: none;
   }
@@ -153,13 +149,6 @@ li:nth-of-type(5) i {
   font-size: 18px;
 }
 
-// main {
-//   background-color: white;
-//   & .photo-spot:nth-of-type(1) {
-//     margin-top: 2rem;
-//   }
-// }
-
 .form {
   background-color: white;
   display: flex;
@@ -170,7 +159,8 @@ li:nth-of-type(5) i {
   z-index: 0;
 
   #contact-form {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -180,8 +170,6 @@ li:nth-of-type(5) i {
     textarea {
       margin-bottom: 1rem;
       padding: 0.6rem;
-      // outline: none;
-      // border: none;
       border: solid 1px #ccc;
     }
 
@@ -199,7 +187,6 @@ li:nth-of-type(5) i {
       border-radius: 40px;
       margin: 0 auto;
       transition: all 0.3s;
-      // box-shadow: 4px 4px 18px 1px #f5d09d;
 
       &:hover {
         color: rgb(221, 175, 107);

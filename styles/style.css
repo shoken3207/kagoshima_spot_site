@@ -885,7 +885,8 @@ li:nth-of-type(5) i {
 }
 
 .form #contact-form {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
